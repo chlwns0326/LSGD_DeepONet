@@ -90,7 +90,7 @@ def data_result_to_npy(uin, uout, xy_in, Q_size, model_dir, in_ftn, save_path, m
     jnp.save(model_dir + save_path + '/u_out_stat' + suffix + '.npy',stat)
 
 # Directories
-model_dir = 'supervisd/Models/Advection_IC/Advection_IC_PQ_LSAdam_100_HH_SS_bat50_L3W100_regul_1e-6' # 
+model_dir = 'supervised/Models/Advection_IC/Advection_IC_PQ_LSAdam_100_HH_SS_bat50_L3W100_regul_1e-6' # 
 data_dir = 'data/' + 'Advection_PQ_data' # Use corresponding data 
 in_dims = 1 # Dimension of input, 1 or 2
 in_ftn = 'Advec_PQ' # Input function type, 'Advec_PQ' for Advection IC, 'kappa' for Poisson-kappa, 'flat_BC' for Poisson-g(BC), otherwise ''
