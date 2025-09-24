@@ -21,7 +21,7 @@ from step import *
 from misc import *
 
 # Directories
-model_dir = 'supervisd/Models/Advection_IC/Advection_IC_PQ_LSAdam_100_HH_SS_bat50_L3W100_regul_1e-6' # 
+model_dir = 'supervised/Models/Advection_IC/Advection_IC_PQ_LSAdam_100_HH_SS_bat50_L3W100_regul_1e-6' # 
 data_dir = 'data/' + 'Advection_PQ_data' # Use corresponding data 
 in_dims = 1 # Dimension of input, 1 or 2
 in_ftn = 'Advec_PQ' # Input function type, 'Advec_PQ' for Advection IC, 'kappa' for Poisson-kappa, 'flat_BC' for Poisson-g(BC), otherwise ''
