@@ -9,15 +9,15 @@ https://arxiv.org/abs/2508.15394
 
 - **python** 3.12.13
 - **jax** 0.4.26 (\[cuda13\] if available)
-- **equinox** 0.11.4
+- **equinox** 0.11.4 
 - **diffrax** 0.5.1
 - **optax** 0.2.2
 - **flax** 0.8.2
-- **scipy** 1.13.0
-- **matplotlib** 3.8.4
-- **tqdm** 4.66.2
+- **scipy** 1.13.0 
+- **matplotlib** 3.8.4 
+- **tqdm** 4.66.2 
 
-Newer versions of python and packages might not work.
+Note: Newer versions of python and packages might not work, especially in JAX related packages. 
 
 ## Setup
 
@@ -28,7 +28,7 @@ cd [Target_directory]
 git clone https://github.com/chlwns0326/LSGD_DeepONet.git
 ```
 
-2. Install dependencies (Note: equinox, diffrax and flax are not supported/downloadable in Anaconda environments)
+2. Install dependencies
 
 
 ## Datasets
