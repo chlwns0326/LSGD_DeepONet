@@ -109,7 +109,7 @@ lrelu = lambda x: leaky_relu(x,negative_slope=0.1)
 ## Poisson f(source): Trunk: C = 150, L = 3, Branch: (33,33,1)-> (16,16,16)-> (8,8,32)-> (4,4,64)-> Flatten 1024 -> 150 (LL in) -> 150 (LL out)
 
 ## Structure
-C = 150 # Number of hidden layer units
+C = 100 # Number of hidden layer units
 L = 3 # Number of layers
 
 ## Branch
