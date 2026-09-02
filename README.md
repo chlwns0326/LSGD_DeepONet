@@ -7,8 +7,17 @@ https://arxiv.org/abs/2508.15394
 
 ## Requirements 
 
-- Python 3.12.10
-- Python library dependency TBA
+- **python** 3.12.13
+- **jax** 0.4.26 (\[cuda13\] if available)
+- **equinox** 0.11.4
+- **diffrax** 0.5.1
+- **optax** 0.2.2
+- **flax** 0.8.2
+- **scipy** 1.13.0
+- **matplotlib** 3.8.4
+- **tqdm** 4.66.2
+
+Newer versions of python and packages might not work.
 
 ## Setup
 
@@ -19,16 +28,14 @@ cd [Target_directory]
 git clone https://github.com/chlwns0326/LSGD_DeepONet.git
 ```
 
-2. Install dependencies:
-```
-TBA
-```
+2. Install dependencies (Note: equinox, diffrax and flax are not supported/downloadable in Anaconda environments)
+
 
 ## Datasets
 
-All datasets except 'Supervised Navier-Stokes' example are already included in '/data' folder as '.mat' files. 
+All datasets except 'Supervised Navier-Stokes' example are already included in **/data** folder as _.mat_ files. 
 
-To obtain the Navier-Stokes dataset, you need to execute '/data_generation/NS_generator.py' by your own. (~780MB)
+To obtain the Navier-Stokes dataset, you need to execute **/data_generation/NS_generator.py** by your own. (~780MB)
 
 ## Project structure
 
@@ -60,21 +67,21 @@ LSGD_DeepONet
    ├─ Poisson_g
    └─ Poisson_f
 ```
-'/supervised' folder is partially expanded to explain its subfolders and python files.
+**/supervised** folder is partially expanded to explain its subfolders and python files.
 
 ## Description of each directory
 
 ### Subdirectory
-- '/data' folder contains datasets used in the training DeepONets '/supervised', '/supervised_N-S' and '/unsupervised'.
-- '/data_generation' folder contains python files for generating each corresponding dataset. 
-- '/supervised' folder contains python files for training DeepONets with supervised learning for **Advection**, **Diffusion-Reaction**, **Poisson(coefficient)** and **Poisson(BC)** PDE problems.
-- '/supervised_N-S' folder contains python files for training DeepONets with supervised learning for **Navier-Stokes(vorticity)** PDE problem.
-- '/unsupervised' folder contains python files for training DeepONets with unsupervised learning for **Advection**, **Poisson(BC)** and **Poisson(source)** PDE problems.
-- '/supervised', '/supervised_N-S' and '/unsupervised' folders contain 'Model' subfolders, which contain partial sample training results for each PDE problem.
+- **/data** folder contains datasets used in the training DeepONets **/supervised**, **/supervised_N-S** and **/unsupervised**.
+- **/data_generation** folder contains python files for generating each corresponding dataset. 
+- **/supervised** folder contains python files for training DeepONets with supervised learning for **Advection**, **Diffusion-Reaction**, **Poisson(coefficient)** and **Poisson(BC)** PDE problems.
+- **/supervised_N-S** folder contains python files for training DeepONets with supervised learning for **Navier-Stokes(vorticity)** PDE problem.
+- **/unsupervised** folder contains python files for training DeepONets with unsupervised learning for **Advection**, **Poisson(BC)** and **Poisson(source)** PDE problems.
+- **/supervised**, **/supervised_N-S** and **/unsupervised** folders contain _Model_ subfolders, which contain partial sample training results for each PDE problem.
 
 ### Python files 
 
-For each (a) '/supervised', (b) '/supervised_N-S', (c1) '/unsupervised/Advection_IBC', (c2) '/unsupervised/Poisson-g' and (c3) '/unsupervised/Poisson-f', 
+For each (a) **/supervised**, (b) **/supervised_N-S**, (c1) **/unsupervised/Advection_IBC**, (c2) **/unsupervised/Poisson-g** and (c3) **/unsupervised/Poisson-f**, 
 the directory contains following python files. 
 
 + [x] **JAX_DeepONet_[]_LSADAM.py** is the main python file for DeepONet training. It handles model settings and hyperparameters, and unifies other python modules. The filename varies in each subdirectory.
