@@ -1,7 +1,8 @@
 # Hybrid Least Squares/Gradient Descent Methods for DeepONets (J. Choi et al., 2026)
 
 Python implementation of the experiments of **Hybrid least squares/gradiet descent method for DeepONets** with JAX library.
-This repository contains data and python codes for experiments of hybrid least squares/gradiet descent method.
+This repository contains data and python codes for experiments of hybrid least squares/gradiet descent method. 
+
 https://arxiv.org/abs/2508.15394
 
 ## Requirements 
@@ -9,12 +10,21 @@ https://arxiv.org/abs/2508.15394
 - Python 3.12.10
 - Python library dependency TBA
 
-## Installation
+## Setup
 
-- TBA
+1. Clone the repository:
+```
+bash
+cd [Target_directory]
+git clone https://github.com/chlwns0326/LSGD_DeepONet.git
+```
+
+2. Install dependencies:
+```
+TBA
+```
 
 ## Datasets
-
 
 All datasets except 'Supervised Navier-Stokes' example are already included in '/data' folder as '.mat' files. 
 
