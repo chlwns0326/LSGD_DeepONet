@@ -2,7 +2,7 @@ import os, warnings
 warnings.filterwarnings('ignore')
 os.environ['XLA_PYTHON_CLIENT_PREALLOCATE'] = 'true' 
 os.environ['XLA_PYTHON_CLIENT_MEM_FRACTION'] = '.35' 
-os.environ['CUDA_VISIBLE_DEVICES'] = '2' 
+os.environ['CUDA_VISIBLE_DEVICES'] = '0' 
 
 # imports
 import scipy.io as io
