@@ -1,23 +1,75 @@
-Hybrid Least Squares/Gradient Descent Methods for DeepONets
+# Code for 'Hybrid Least Squares/Gradient Descent Methods for DeepONets' (J. Choi et al., 2026)
 
-This repository contains data and python codes for numerical experiments of https://arxiv.org/abs/2508.15394
+Python implementation of the experiments of **Hybrid least squares/gradiet descent method for DeepONets** with JAX library.
+This repository contains data and python codes for experiments of hybrid least squares/gradiet descent method.
+https://arxiv.org/abs/2508.15394
 
-Version Aug. 29. 2025 (Initial commit)
+## Requirements 
 
-    Fixed code issues and re-trained corresponding experiments.
-    Renamed the old supervised experiments folder to Model_old.
+- Python 3.12.10
+- Python library dependency TBA
 
-Version Sep. 24. 2025 (Minor update)
+## Installation
 
-    Fixed typo in directory for save/load for some files
+- TBA
 
-Version Feb. 05. 2026 (Major update)
+## Datasets
 
-    Updated and renewed python files for the training (Method for the LS step, seed control, ...)
-    Added 2D incompressible Navier-Stokes example (data generation, training, data file is excluded due to its huge size)
-    Some datasets are slightly changed
+All datasets are generated from the corresponding generating codes(.py) in '/data_generation' folder. 
 
-Version Mar. 12. 2026 (Major update)
+All datasets except 'Supervised Navier-Stokes' example are already included in '/data' folder as '.mat' files. 
 
-    Updated and re-newed training results with optimal batch size and LS step scheduling. 
-    Minor tweak for the main code for simpler input settings.
+To obtain the Navier-Stokes dataset, you need to execute '/data_generation/NS_generator.py' by your own. (~780MB)
+
+## Project structure
+
+```
+LSGD_DeepONet
+├─ data
+├─ data_generation
+├─ supervised
+│  ├─ Models
+│  │  ├─ Advection_IBC
+│  │  ├─ DiffReact
+│  │  ├─ Poisson_g
+│  │  └─ Poisson_kappa
+|  ├─ JAX_DeepONet_Label_LSADAM.py
+|  ├─ JAX_DeepONet_Label_LSADAM_all_in_one.py
+|  ├─ JAX_DeepONet_draw.py
+|  ├─ LSGD.py
+│  ├─ init_param.py
+│  ├─ initialization.py
+│  ├─ loss.py
+│  ├─ misc.py
+│  ├─ models.py
+│  ├─ networks.py
+│  ├─ step.py
+│  └─ train.py
+├─ supervised_N-S
+└─ unsupervised
+   ├─ Advection_IBC
+   ├─ Poisson_f
+   └─ Poisson_g
+LICENSE
+README.md
+```
+'/supervised' folder is partially expanded to explain its subfolders and python files.
+
+
+## Citation
+
+```
+@misc{choi2025hybridsquaresgradientdescentmethods,
+      title={Hybrid Least Squares/Gradient Descent Methods for DeepONets}, 
+      author={Jun Choi and Chang-Ock Lee and Minam Moon},
+      year={2025},
+      eprint={2508.15394},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2508.15394}, 
+}
+```
+
+## License
+
+This project is licensed under the [MIT Liscnse](LICENSE).
