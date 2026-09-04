@@ -17,7 +17,7 @@ https://arxiv.org/abs/2508.15394
 - **matplotlib** 3.8.4 
 - **tqdm** 4.66.2 
 
-Note: Newer versions of python and packages might not work, especially in JAX related packages. 
+Note: Newer versions of python and some packages might not operate properly, especially in JAX related packages. 
 
 ## Setup
 
